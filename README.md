@@ -2,8 +2,6 @@
 
 > **High-performance ANFIS implementation using NumPy vectorization for 10-100x speedup. Combines fuzzy logic with neural networks through compact (~140 lines), production-ready code.**
 
-
-
 ## 🎯 Overview
 
 This repository provides a **highly optimized, vectorized implementation** of Adaptive Neuro-Fuzzy Inference System (ANFIS) that achieves **10-100x speedup** over traditional loop-based approaches while maintaining a remarkably compact codebase (~140 lines of core implementation).
@@ -343,10 +341,6 @@ If you use this implementation in your research, please cite:
 }
 
 ```
-
-## 📄 License
-
-This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
