@@ -139,7 +139,7 @@ for n in range(N):              # Each sample
 
 ```
 
-### Our Vectorized Approach (Fast)
+### Vectorized Approach (Fast)
 
 ```python
 # Broadcasting: O(N × K × F) parallel operations
@@ -148,22 +148,6 @@ sq = diffs**2 / (2 * stds[None, :, :]**2)
 memberships = np.exp(-sq.sum(axis=2))  # All at once!
 
 ```
-
-### Performance Impact
-
-
-| Dataset Size | Loop-based | Vectorized | Speedup   |
-| ------------ | ---------- | ---------- | --------- |
-| 768 samples  | 450s       | 12s        | **37.5x** |
-| 5000 samples | ~45min     | ~90s       | **30x**   |
-
-
-**Key Optimizations:**
-
-- **Broadcasting**: Automatic dimension expansion for parallel ops
-- **Tensor Reuse**: Compute differences once, use for memberships + gradients
-- **In-place Ops**: Minimize memory allocations
-- **BLAS Backend**: NumPy leverages optimized linear algebra libraries
 
 ## 📊 Example: Energy Efficiency Prediction
 
@@ -304,18 +288,6 @@ vectorized-anfis/
 - Start with `n_clusters = sqrt(N_samples)` as baseline
 - Monitor validation loss to detect overfitting
 
-## 📈 Benchmark Results
-
-
-| Dataset           | Samples | Features | MSE  | R²    | Time |
-| ----------------- | ------- | -------- | ---- | ----- | ---- |
-| Energy Efficiency | 768     | 8        | 2.34 | 0.982 | 30s  |
-| Housing           | 5000    | 13       | 8.71 | 0.891 | 90s  |
-| Concrete          | 1030    | 8        | 23.4 | 0.924 | 25s  |
-
-
-*50 clusters, 200 epochs with early stopping, Intel i7 CPU*
-
 ## 🤝 Contributing
 
 We welcome contributions! Please open an issue or submit a pull request.
@@ -330,17 +302,7 @@ We welcome contributions! Please open an issue or submit a pull request.
 
 ## 📜 Citation
 
-If you use this implementation in your research, please cite:
-
-```bibtex
-@software{vectorized_anfis,
-  title = {Vectorized ANFIS: High-Performance Adaptive Neuro-Fuzzy Inference System},
-  author = {Your Name},
-  year = {2025},
-  url = {https://github.com/yourusername/vectorized-anfis}
-}
-
-```
+If you use this implementation in your research, please star this Repo.
 
 ## 🙏 Acknowledgments
 
