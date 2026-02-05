@@ -23,7 +23,7 @@ This repository provides a **highly optimized, vectorized implementation** of Ad
 ```bash
 git clone https://github.com/yourusername/vectorized-anfis.git
 cd vectorized-anfis
-pip install -r requirements.txt
+pip install -r Requirements.txt
 
 ```
 
@@ -53,7 +53,7 @@ model.test(X_test, y_test)
 
 ```bash
 python main.py  # Simple example
-python examples/energy_demo.py  # Comprehensive demo with visualizations
+python Data/Energy_demo.py  # Comprehensive demo with visualizations
 
 ```
 
@@ -126,7 +126,7 @@ y(x) = ∑ⱼ w̄ⱼ(x) · θⱼ
 3. **Backpropagation**: Update premise parameters (centers cⱼᵢ, stds σⱼᵢ) via gradient descent
 4. **Validation**: Monitor validation loss for early stopping
 
-**See [docs/theory.md](https://claude.ai/chat/docs/theory.md) for complete mathematical derivations.**
+**See [docs/theory.md](docs/theory.md) for complete mathematical derivations.**
 
 ## ⚡ Vectorization: The Secret Sauce
 
@@ -195,7 +195,7 @@ Training:  ~30 seconds (200 epochs, early stopping at epoch 47)
 
 **Visualization:**
 
-Run `python examples/energy_demo.py` to see:
+Run `python Data/Energy_demo.py` to see:
 
 - Actual vs Predicted scatter plots
 - Residual analysis
@@ -267,27 +267,26 @@ vectorized-anfis/
 ├── src/
 │   ├── __init__.py          # Package initialization
 │   └── anfis.py             # Core ANFIS implementation (~140 lines)
-├── examples/
-│   └── energy_demo.py       # Comprehensive demo with visualizations
+├── Data/
+│   └── Energy_demo.py       # Comprehensive demo with visualizations
+├── Example/
+│   └── ENB2012_data.xlsx    # Sample dataset
 ├── docs/
-│   ├── theory.md            # Deep mathematical theory
-│   └── quickstart.md        # Step-by-step tutorial
-├── data/
-│   └── README.md            # Dataset documentation
+│   └── theory.md            # Deep mathematical theory
 ├── main.py                  # Simple entry point
-├── requirements.txt         # Dependencies
-├── setup.py                 # Package installation
-├── CONTRIBUTING.md          # Contribution guidelines
+├── quickstart.md            # Step-by-step tutorial
+├── Requirements.txt         # Dependencies
+├── Setup.py                 # Package installation
 └── README.md                # This file
 
 ```
 
 ## 🎓 Learning Resources
 
-- **[Quick Start Guide](https://claude.ai/chat/docs/quickstart.md)**: Step-by-step tutorial for beginners
-- **[Mathematical Theory](https://claude.ai/chat/docs/theory.md)**: Complete derivations and explanations
-- **[Energy Demo](https://claude.ai/chat/examples/energy_demo.py)**: Working example with visualizations
-- **[Data Guide](https://claude.ai/chat/data/README.md)**: Dataset information and preprocessing
+- **[Quick Start Guide](quickstart.md)**: Step-by-step tutorial for beginners
+- **[Mathematical Theory](docs/theory.md)**: Complete derivations and explanations
+- **[Energy Demo](Data/Energy_demo.py)**: Working example with visualizations
+- **[Dataset Info](README.md#-example-energy-efficiency-prediction)**: Dataset information and preprocessing
 
 ## 🔧 Hyperparameter Guide
 
@@ -321,7 +320,7 @@ vectorized-anfis/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](https://claude.ai/chat/CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please open an issue or submit a pull request.
 
 **Areas for contribution:**
 
@@ -347,7 +346,7 @@ If you use this implementation in your research, please cite:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see [LICENSE](https://claude.ai/chat/LICENSE) for details.
+This project is licensed under the MIT License.
 
 ## 🙏 Acknowledgments
 
